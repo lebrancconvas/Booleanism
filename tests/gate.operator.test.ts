@@ -1,5 +1,5 @@
 import { describe, it, expect } from "bun:test";
-import { NAND, NOR, XOR } from "../utils/operators/gate";
+import { NAND, NOR, XNOR, XOR } from "../utils/operators/gate";
 
 describe("Logic Gate Operator Test.", () => {
   it("NAND Operator Test.", () => {
@@ -22,4 +22,11 @@ describe("Logic Gate Operator Test.", () => {
     expect(XOR(false, true)).toBe(true);
     expect(XOR(false, false)).toBe(false);
   });
+
+  it("XNOR Operator Test.", () => {
+    expect(XNOR(true, true)).toBe(true);
+    expect(XNOR(true, false)).toBe(false);
+    expect(XNOR(false, true)).toBe(false);
+    expect(XNOR(false, false)).toBe(true);
+  })
 });
